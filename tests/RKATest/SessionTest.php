@@ -56,6 +56,12 @@ class SessionTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($session->get('a'));
     }
 
+    public function testHas()
+    {
+        $session = new Session;
+        $this->assertTrue(isset($session->a));
+    }
+
     public function testIsset()
     {
         $session = new Session;
