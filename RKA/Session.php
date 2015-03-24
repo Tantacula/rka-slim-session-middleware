@@ -42,6 +42,16 @@ final class Session
         $_SESSION = [];
     }
 
+    public function has($key)
+    {
+        return $this->__isset($key);
+    }
+
+    public function all()
+    {
+        return $_SESSION;
+    }
+
     public function __set($key, $value)
     {
         return $this->set($key, $value);
